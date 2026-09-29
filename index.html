@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MSA Development | Professional Web Solutions</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #05080d;
+            color: whitesmoke;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: 38px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            background: rgba(5, 8, 13, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 18px 0;
+        }
+
+        .navbar-brand {
+            color: #00e59b !important;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .navbar-brand span {
+            color: white;
+        }
+
+        .nav-link {
+            color: #d1d5db !important;
+            margin-left: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #00e59b !important;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(0, 229, 155, 0.18),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom left,
+                    rgba(0, 153, 255, 0.12),
+                    transparent 35%
+                ),
+                #05080d;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid rgba(0,229,155,0.4);
+            border-radius: 30px;
+            color: #00e59b;
+            background: rgba(0,229,155,0.08);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: #00e59b;
+        }
+
+        .hero p {
+            color: #aab1bb;
+            font-size: 19px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 25px 0 35px;
+        }
+
+        .btn-main {
+            background: #00e59b;
+            color: #04110d;
+            padding: 13px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: none;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background: #00c987;
+            color: black;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 1px solid #374151;
+            color: white;
+            padding: 13px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            border-color: #00e59b;
+            color: #00e59b;
+        }
+
+
+        /* =========================
+           HERO CARD
+        ========================== */
+
+        .hero-card {
+            background: rgba(15, 23, 32, 0.8);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+        }
+
+        .code-window {
+            background: #020408;
+            border-radius: 12px;
+            padding: 25px;
+            font-family: Consolas, monospace;
+            color: #aab1bb;
+        }
+
+        .code-green {
+            color: #00e59b;
+        }
+
+        .code-blue {
+            color: #5eb5ff;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: #080d14;
+        }
+
+        .service-card {
+            height: 100%;
+            background: #0c131c;
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #18212d;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #00e59b;
+            box-shadow: 0 20px 40px rgba(0,229,155,0.08);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,229,155,0.1);
+            color: #00e59b;
+            border-radius: 12px;
+            font-size: 27px;
+            margin-bottom: 25px;
+        }
+
+        .service-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #9ca3af;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-text h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .about-text h2 span {
+            color: #00e59b;
+        }
+
+        .about-text p {
+            color: #9ca3af;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        .about-feature {
+            margin-top: 20px;
+        }
+
+        .about-feature i {
+            color: #00e59b;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           STATS
+        ========================== */
+
+        .stats {
+            background: #00e59b;
+            color: #04110d;
+            padding: 55px 0;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box h2 {
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .stat-box p {
+            font-weight: 600;
+            margin: 0;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .project-card {
+            background: #0c131c;
+            border: 1px solid #18212d;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #00e59b;
+        }
+
+        .project-image {
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #101b28,
+                    #07100d
+                );
+
+            font-size: 70px;
+            color: #00e59b;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content p {
+            color: #9ca3af;
+        }
+
+        .technology {
+            display: inline-block;
+            background: rgba(0,229,155,0.1);
+            color: #00e59b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 3px;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           CTA
+        ========================== */
+
+        .cta-box {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,229,155,0.15),
+                    rgba(0,153,255,0.08)
+                );
+
+            border: 1px solid rgba(0,229,155,0.25);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: 42px;
+            font-weight: 800;
+        }
+
+        .cta-box p {
+            color: #aab1bb;
+            margin: 20px auto 30px;
+            max-width: 650px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #020408;
+            border-top: 1px solid #141c26;
+            padding: 35px 0;
+            color: #808894;
+        }
+
+        footer strong {
+            color: #00e59b;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width: 768px) {
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-card {
+                margin-top: 50px;
+            }
+
+            .btn-outline-custom {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .cta-box {
+                padding: 35px 20px;
+            }
+
+            .cta-box h2 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            MSA <span>Development</span>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <div class="hero-badge">
+                    <i class="bi bi-code-slash"></i>
+                    Professional Software Solutions
+                </div>
+
+                <h1>
+                    We Build Modern
+                    <span>Digital Experiences.</span>
+                </h1>
+
+                <p>
+                    MSA Development creates professional, secure and
+                    scalable websites and web applications designed
+                    to help businesses grow in the digital world.
+                </p>
+
+                <a href="#contact" class="btn-main">
+                    Start Your Project
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+                <a href="#projects" class="btn-outline-custom">
+                    View Projects
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="hero-card">
+
+                    <div class="code-window">
+
+                        <p>
+                            <span class="code-blue">const</span>
+                            project =
+                            <span class="code-green">{</span>
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;company:
+                            <span class="code-green">
+                                "MSA Development"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;quality:
+                            <span class="code-green">
+                                "Professional"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;performance:
+                            <span class="code-green">
+                                "Optimized"
+                            </span>,
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;secure:
+                            <span class="code-blue">
+                                true
+                            </span>
+                        </p>
+
+                        <p>
+                            <span class="code-green">}</span>;
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================== -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <h2 class="section-title">Our Services</h2>
+
+        <p class="section-subtitle">
+            Complete technology solutions designed for modern
+            businesses and organizations.
+        </p>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-window"></i>
+                    </div>
+
+                    <h4>Web Development</h4>
+
+                    <p>
+                        Responsive, fast and professional websites
+                        built using modern development technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-code-square"></i>
+                    </div>
+
+                    <h4>Web Applications</h4>
+
+                    <p>
+                        Powerful business applications with secure
+                        backend systems and modern user interfaces.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-cloud"></i>
+                    </div>
+
+                    <h4>Cloud Solutions</h4>
+
+                    <p>
+                        Cloud deployment, hosting and infrastructure
+                        solutions designed for scalability.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-cart-check"></i>
+                    </div>
+
+                    <h4>E-Commerce</h4>
+
+                    <p>
+                        Professional online stores with product,
+                        customer and order management features.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h4>Database Solutions</h4>
+
+                    <p>
+                        Structured and secure database systems
+                        designed for reliable application performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-gear"></i>
+                    </div>
+
+                    <h4>Maintenance</h4>
+
+                    <p>
+                        Continuous website maintenance, updates,
+                        optimization and technical support.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-text">
+
+                    <h2>
+                        Building Technology
+                        <span>That Works.</span>
+                    </h2>
+
+                    <p>
+                        MSA Development focuses on creating clean,
+                        reliable and scalable digital solutions.
+                        Our goal is to transform business ideas into
+                        professional web applications that provide
+                        real value.
+                    </p>
+
+                    <div class="about-feature">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Modern & Responsive Design
+                    </div>
+
+                    <div class="about-feature">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Secure Development
+                    </div>
+
+                    <div class="about-feature">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Performance Optimization
+                    </div>
+
+                    <div class="about-feature">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Scalable Architecture
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="hero-card">
+
+                    <h4 class="mb-4">
+                        Technologies We Work With
+                    </h4>
+
+                    <div class="row g-3">
+
+                        <div class="col-6">
+                            <div class="service-card">
+                                <h5>ASP.NET Core</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="service-card">
+                                <h5>Python</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="service-card">
+                                <h5>AWS Cloud</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="service-card">
+                                <h5>Docker</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================== -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-6 col-lg-3 stat-box">
+                <h2>100%</h2>
+                <p>Responsive</p>
+            </div>
+
+            <div class="col-6 col-lg-3 stat-box">
+                <h2>24/7</h2>
+                <p>Support</p>
+            </div>
+
+            <div class="col-6 col-lg-3 stat-box">
+                <h2>Fast</h2>
+                <p>Performance</p>
+            </div>
+
+            <div class="col-6 col-lg-3 stat-box">
+                <h2>Secure</h2>
+                <p>Development</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================== -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-subtitle">
+            Some examples of solutions that can be developed
+            for businesses and organizations.
+        </p>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <i class="bi bi-shop"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>E-Commerce Platform</h4>
+
+                        <p>
+                            Complete online shopping system with
+                            product and order management.
+                        </p>
+
+                        <span class="technology">ASP.NET</span>
+                        <span class="technology">SQL</span>
+                        <span class="technology">Bootstrap</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Business Management</h4>
+
+                        <p>
+                            Modern management application for
+                            employees, customers and operations.
+                        </p>
+
+                        <span class="technology">C#</span>
+                        <span class="technology">MVC</span>
+                        <span class="technology">SQL Server</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <i class="bi bi-cloud-check"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Cloud Application</h4>
+
+                        <p>
+                            Scalable cloud-based application
+                            deployed using modern DevOps tools.
+                        </p>
+
+                        <span class="technology">AWS</span>
+                        <span class="technology">Docker</span>
+                        <span class="technology">DevOps</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT CTA
+========================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <h2>
+                Have a Project in Mind?
+            </h2>
+
+            <p>
+                Turn your idea into a professional digital solution.
+                Contact MSA Development and start building your
+                next website or web application.
+            </p>
+
+            <a href="mailto:yourmail@example.com"
+               class="btn-main">
+
+                Contact Us
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <p class="mb-0">
+                    © 2026 <strong>MSA Development</strong>.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <span>
+                    Designed & Developed by MSA Development
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
