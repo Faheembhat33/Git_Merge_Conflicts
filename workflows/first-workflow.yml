@@ -15,4 +15,7 @@ jobs:
         run: echo "Hello Faheem"
 
       - name: Print GitHub Action Message
+        run: echo "Testing Again!"
+
+      - name: Print GitHub Action Message
         run: echo "Git Hub Action is running successfully!"
