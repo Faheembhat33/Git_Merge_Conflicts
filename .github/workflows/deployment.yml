@@ -1,0 +1,20 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Faheem Lambda
+        run: echo "Welcome to Faheem In Devops Class"
+
+      - name: Print GitHub Action Message
+        run: echo "Testing Git Action"
+
+      - name: Print Git Hub Action Agian
+        run: echo "Second Testing of Git Action"
