@@ -1,0 +1,21 @@
+name: Basic Ci Pipelibe
+
+on: 
+  push:
+   branches:
+     - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display File
+        run: ls -la
+
+      - name: Display Message
+        run: echo "Application CI Pipeline Completed!"
